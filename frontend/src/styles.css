@@ -1,12 +1,10 @@
 @import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css2?family=Lato');
 
 *{
     margin: 0;
     top: 0;
+    font-family: 'Ubuntu', sans-serif;
 }
 
-.image-cover{
-    background-image: url('https://imgur.com/iPRrfWI'); 
-    background-repeat:no-repeat; 
-    background-size:cover;
-}
