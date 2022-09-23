@@ -1,0 +1,65 @@
+@import "~bootstrap/dist/css/bootstrap.css";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+
+*{
+    margin: 0;
+    top: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+h1{
+    font-size: 70px;
+    font-weight: 700;
+    color: aqua;
+}
+
+.bg-color1{
+    background: #F00000;
+}
+.bg-color2{
+    background: #ff4848;
+}
+
+.bg-color3{
+    background:#FFFAFA;
+}
+
+.bg-color4{
+    background: #261c15;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+}
+
+.bg-color5{
+    background: #191308;
+    color: #fff;
+    font-size: 20px;
+    font-weight: 600;  
+    letter-spacing: 0.15em; 
+}
+
+.bg-gr-cover{
+    /* top: -200px; */
+    background: linear-gradient(0deg, #FF4848 35.86%, rgba(255, 72, 72, 0) 52.97%);
+    text-align: center;
+}
+
+.bg-gr-cover p{
+    color: #fff;
+    font-size: 18px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 200;
+}
+
+.image-cover{
+    /* background-image: url("https://imgur.com/iPRrfWI");
+    background-image: url('https://imgur.com/iPRrfWI'); */
+    background-image: url("../prelogin/images/Portada-AD-MarkingControl.jpg");
+    background-repeat:no-repeat; 
+    background-size:contain;
+    background-position: center;
+    height: 500px;
+}

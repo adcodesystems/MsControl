@@ -4,11 +4,13 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PersonaNaturalFormComponent } from './components/persona-natural-form/persona-natural-form.component';
+import { PreloginComponent } from './components/prelogin/prelogin.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    PersonaNaturalFormComponent
+    PersonaNaturalFormComponent,
+    PreloginComponent
   ],
   imports: [
     BrowserModule,
