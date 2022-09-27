@@ -8,3 +8,20 @@
     font-family: 'Ubuntu', sans-serif;
 }
 
+.center-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bg-color1{
+    background: #F00000;
+}
+
+.bg-color2{
+    background: #ff4848;
+}
+
+.bg-color3{
+    background:#FFFAFA;
+}
