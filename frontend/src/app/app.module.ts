@@ -6,6 +6,9 @@ import { AppComponent } from './app.component';
 import { PersonaNaturalFormComponent } from './components/persona-natural-form/persona-natural-form.component';
 import { PreloginComponent } from './components/prelogin/prelogin.component';
 import { LoginComponent } from './components/login/login.component';
+import { SetupMarcacionComponent } from './components/setup-marcacion/setup-marcacion.component';
+
+import { MarcacionComponent } from './components/marcacion/marcacion.component';
 
 
 @NgModule({
@@ -13,7 +16,9 @@ import { LoginComponent } from './components/login/login.component';
     AppComponent,
     PersonaNaturalFormComponent,
     PreloginComponent,
-    LoginComponent
+    LoginComponent,
+    SetupMarcacionComponent,
+    MarcacionComponent
   ],
   imports: [
     BrowserModule,

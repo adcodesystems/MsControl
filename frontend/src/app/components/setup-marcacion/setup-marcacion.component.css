@@ -1,0 +1,58 @@
+i{
+    padding: 20;
+    color: #fff;
+}
+
+.margin-all{
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+header a{
+    cursor: pointer;
+}
+
+header i{
+    font-size: 24px;
+    color: #261c15;
+}
+
+
+header a:hover i{
+    color: #ff4848;
+}
+
+.box-shadow1:hover{
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);
+}
+
+/* ul li a :hover i{
+    color: #ff4848;
+} */
+
+.padding-top{
+    padding-top: 20px;
+}
+
+.padding-bottom{
+    padding-bottom: 20px;
+}
+.padding-bottom-xl{
+    padding-bottom: 20px;
+}
+
+.padding-left{
+    padding-left: 20px;
+}
+
+.padding-right{
+    padding-right: 20px;
+}
+
+.padding-all{
+    padding: 20px;
+}
+
+.border-shadow{
+    box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);
+}
