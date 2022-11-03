@@ -1,4 +1,4 @@
 git status
 git add .
-git commit -m "Cambio"
+git commit -m "Cambio TOTAL"
 git push origin main
