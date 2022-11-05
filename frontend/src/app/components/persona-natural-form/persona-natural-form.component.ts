@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
+import { PersonaService } from '../../services/persona.service';
+
 @Component({
   selector: 'app-persona-natural-form',
   templateUrl: './persona-natural-form.component.html',
@@ -7,9 +9,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PersonaNaturalFormComponent implements OnInit {
 
-  constructor() { }
+  constructor(private personaservice: PersonaService) { }
 
   ngOnInit(): void {
+
+    // this.personaservice.getPersonas().subscribe(
+    //   res => console.log(res),
+    //   err => console.error
+    // );
   }
 
 }

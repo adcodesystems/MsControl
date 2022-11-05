@@ -10,6 +10,7 @@ import { SetupMarcacionComponent } from './components/setup-marcacion/setup-marc
 
 import { MarcacionComponent } from './components/marcacion/marcacion.component';
 
+import {PersonaService} from './services/persona.service';
 
 @NgModule({
   declarations: [
@@ -24,7 +25,7 @@ import { MarcacionComponent } from './components/marcacion/marcacion.component';
     BrowserModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [PersonaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

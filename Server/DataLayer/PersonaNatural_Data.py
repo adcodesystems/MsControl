@@ -16,9 +16,10 @@ class PersonaNatural_Data:
             list = []
 
             for row in Rows:
-                Data_ent = PersonaNaturalEntity.Cargar(row)
+                print(row)
+                Data_ent = PersonaNaturalEntity.CargarSoloNombre(row)
                 list.append(Data_ent)
-
+            print(list)
             return list
         except Exception as e:
             print(e)
