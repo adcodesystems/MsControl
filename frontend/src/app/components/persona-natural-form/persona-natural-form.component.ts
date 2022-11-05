@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 import { PersonaService } from '../../services/persona.service';
+import {PersonaModel} from '../../Models/PersonaModel';
 
 @Component({
   selector: 'app-persona-natural-form',
@@ -9,14 +10,16 @@ import { PersonaService } from '../../services/persona.service';
 })
 export class PersonaNaturalFormComponent implements OnInit {
 
-  constructor(private personaservice: PersonaService) { }
+  Personas: any = []
 
-  ngOnInit(): void {
+  constructor(protected personasservices: PersonaService) { }
 
-    // this.personaservice.getPersonas().subscribe(
-    //   res => console.log(res),
-    //   err => console.error
-    // );
+  ngOnInit() {
+
+    this.personasservices.getPersonas().subscribe(
+      res => { this.Personas = res; },
+      err => console.error
+    );
   }
 
 }

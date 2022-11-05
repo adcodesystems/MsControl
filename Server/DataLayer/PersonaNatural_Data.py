@@ -16,7 +16,6 @@ class PersonaNatural_Data:
             list = []
 
             for row in Rows:
-                print(row)
                 Data_ent = PersonaNaturalEntity.CargarSoloNombre(row)
                 list.append(Data_ent)
             print(list)
