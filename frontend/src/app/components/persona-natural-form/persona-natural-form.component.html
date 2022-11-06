@@ -1,70 +1,71 @@
 
 <div class="container">
 
-  <form class="needs-validation" novalidate>
+  <form action="">
     <div class="form-row">
-    <div class="col-md-3 mb-3">
-      <label for="validationCustom01">Dni</label>
-      <input type="text" class="form-control" id="validationCustom01"  required>
-      <div class="valid-feedback">
-        Looks good!
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom01">Dni</label>
+        <input type="text" class="form-control" [(ngModel)]="person.DOC_PER"  [ngModelOptions]="{standalone: true}">
+
       </div>
+
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom01">Nombre</label>
+        <input type="text" class="form-control" [(ngModel)]="person.NOM_PER"  [ngModelOptions]="{standalone: true}">
+
+      </div>
+
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom01">Apellido Paterno</label>
+        <input type="text" class="form-control" [(ngModel)]="person.APE_PAT"  [ngModelOptions]="{standalone: true}">
+
+      </div>
+      <div class="col-md-3 mb-3">
+        <label for="validationCustom01">Apellido Materno</label>
+        <input type="text" class="form-control" [(ngModel)]="person.APE_MAT"  [ngModelOptions]="{standalone: true}">
+
+      </div>
+
+
+
+
+
     </div>
 
-    <div class="col-md-3 mb-3">
-      <label for="validationCustom01">Nombre</label>
-      <input type="text" class="form-control" id="validationCustom01"  required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
-    </div>
-
-    <div class="col-md-3 mb-3">
-      <label for="validationCustom01">Apellido Paterno</label>
-      <input type="text" class="form-control" id="validationCustom01"  required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
-    </div>
-    <div class="col-md-3 mb-3">
-      <label for="validationCustom01">Apellido Materno</label>
-      <input type="text" class="form-control" id="validationCustom01"  required>
-      <div class="valid-feedback">
-        Looks good!
-      </div>
-    </div>
-
- 
-
-
-
-  </div>
-
-  <button class="btn btn-primary" type="submit">Aceptar</button>
-</form>
+    <button class="btn btn-success btn-block" (click)="edit  ? UpdateTotalNewPersona() : SaveNewPersona()">Aceptar</button>
+  </form>
 </div>
 
 <br><br>
 <div class="container">
-<table class="table table-hover">
-  <thead>
-    <tr>
-      <th scope="col">#</th>
-      <th scope="col">Dni</th>
-      <th scope="col">Nombre</th>
-      <th scope="col">Apellido Paterno</th>
-      <th scope="col">Apellido Materno</th>
-    </tr>
-  </thead>
-  <tbody >
-    <tr *ngFor="let persona of Personas">
-      <th scope="row">1</th>
-      <td>{{persona.DOC_PER}}</td>
-      <td>{{persona.NOM_PER}}</td>
-      <td>{{persona.APE_PAT}}</td>
-      <td>{{persona.APE_MAT}}</td>
-    </tr>
-   
-  </tbody>
-</table>
+ <table class="table table-hover">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Dni</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Apellido Paterno</th>
+        <th scope="col">Apellido Materno</th>
+        <th scope="col">Acción</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let persona of Personas">
+        <th scope="row">1</th>
+        <td>{{persona.DOC_PER}}</td>
+        <td>{{persona.NOM_PER}}</td>
+        <td>{{persona.APE_PAT}}</td>
+        <td>{{persona.APE_MAT}}</td>
+        <td>  
+          <button class="btn btn-danger" (click)="DeleteNewPersona(persona.PERID)">
+          X
+        </button>
+
+        <button class="btn btn-danger" (click)="UpdateNewPersona(persona)">
+          E
+        </button></td>
+      </tr>
+
+    </tbody>
+  </table> 
 </div>

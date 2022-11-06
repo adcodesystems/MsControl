@@ -9,9 +9,11 @@ import { PreloginComponent } from './components/prelogin/prelogin.component';
 import { LoginComponent } from './components/login/login.component';
 import { SetupMarcacionComponent } from './components/setup-marcacion/setup-marcacion.component';
 
+import { FormsModule } from '@angular/forms';
+
 import { MarcacionComponent } from './components/marcacion/marcacion.component';
 
-import {PersonaService} from './services/persona.service';
+import { PersonaService } from './services/persona.service';
 
 
 
@@ -22,12 +24,13 @@ import {PersonaService} from './services/persona.service';
     PreloginComponent,
     LoginComponent,
     SetupMarcacionComponent,
-    MarcacionComponent
+    MarcacionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
 
   ],
   providers: [PersonaService],
