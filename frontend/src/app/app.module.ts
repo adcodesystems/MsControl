@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { NgModel } from '@angular/forms';
 import { CommonModule } from '@angular/common';
@@ -11,7 +12,12 @@ import { PreloginComponent } from './components/prelogin/prelogin.component';
 import { LoginComponent } from './components/login/login.component';
 import { SetupMarcacionComponent } from './components/setup-marcacion/setup-marcacion.component';
 
+import { FormsModule } from '@angular/forms';
+
 import { MarcacionComponent } from './components/marcacion/marcacion.component';
+
+import { PersonaService } from './services/persona.service';
+
 
 
 @NgModule({
@@ -21,14 +27,16 @@ import { MarcacionComponent } from './components/marcacion/marcacion.component';
     PreloginComponent,
     LoginComponent,
     SetupMarcacionComponent,
-    MarcacionComponent
+    MarcacionComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    CommonModule
+    CommonModule,
+    HttpClientModule,
+    FormsModule
   ],
-  providers: [],
+  providers: [PersonaService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

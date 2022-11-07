@@ -16,3 +16,25 @@ class PersonaNatural_Business:
             return jsonData
         except Exception as e:
             print(e)
+
+    def Post_PersonaNatural_Insert(Ent: PersonaNaturalEntity):
+        try:
+            data = PersonaNatural_Data.Post_PersonaNatural_Insert(Ent)
+            return data
+        except Exception as e:
+            print(e)
+
+
+    def Post_PersonaNatural_Delete(Id: int):
+        try:
+            data = PersonaNatural_Data.Post_PersonaNatural_Delete(Id)
+            return data
+        except Exception as e:
+            print(e)
+
+    def Update_PersonaNatural_Insert(Ent: PersonaNaturalEntity):
+        try:
+            data = PersonaNatural_Data.Update_PersonaNatural_Insert(Ent)
+            return data
+        except Exception as e:
+            print(e)

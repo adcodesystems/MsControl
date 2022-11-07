@@ -23,18 +23,27 @@ class PersonaNaturalEntity:
         c = PersonaNaturalEntity()
         c.PERID = _json['PERID']
         c.TIP_DOCID = _json['TIP_DOCID']
-        c.DOC_PER = _json['TDOC_PER']
-        c.NOM_PER = _json['TNOM_PER']
-        c.APE_PAT = _json['TAPE_PAT']
-        c.APE_MAT = _json['TAPE_MAT']
-        c.FEC_NAC = _json['TFEC_NAC']
-        c.FEC_VEC = _json['TFEC_VEC']
-        c.TIP_SEXID = _json['TTIP_SEXID']
-        c.TIP_CIVID = _json['TTIP_CIVID']
-        c.DIR = _json['TDIR']
-        c.DIR_REF = _json['TDIR_REF']
-        c.UBIID = _json['TUBIID']
-        c.FEC_REG = _json['TFEC_REG']
-        c.USU_REG = _json['TUSU_REG']
-        c.EST_REG = _json['TEST_REG']
+        c.DOC_PER = _json['DOC_PER']
+        c.NOM_PER = _json['NOM_PER']
+        c.APE_PAT = _json['APE_PAT']
+        c.APE_MAT = _json['APE_MAT']
+        # c.FEC_NAC = datetime(_json['FEC_NAC'])
+        # c.FEC_VEC = datetime(_json['FEC_VEC'])
+        c.TIP_SEXID = _json['TIP_SEXID']
+        c.TIP_CIVID = _json['TIP_CIVID']
+        c.DIR = _json['DIR']
+        c.DIR_REF = _json['DIR_REF']
+        c.UBIID = _json['UBIID']
+        # c.FEC_REG = datetime(_json['FEC_REG'])
+        c.USU_REG = _json['USU_REG']
+        c.EST_REG = bool(_json['EST_REG'])
+        return c
+
+    def CargarSoloNombre(_json: any):
+        c = PersonaNaturalEntity()
+        c.PERID = _json['PERID']
+        c.DOC_PER = _json['DOC_PER']
+        c.NOM_PER = _json['NOM_PER']
+        c.APE_PAT = _json['APE_PAT']
+        c.APE_MAT = _json['APE_MAT']
         return c
