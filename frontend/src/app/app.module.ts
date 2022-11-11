@@ -2,6 +2,9 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 
+import { NgModel } from '@angular/forms';
+import { CommonModule } from '@angular/common';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { PersonaNaturalFormComponent } from './components/persona-natural-form/persona-natural-form.component';
@@ -29,9 +32,9 @@ import { PersonaService } from './services/persona.service';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    CommonModule,
     HttpClientModule,
     FormsModule
-
   ],
   providers: [PersonaService],
   bootstrap: [AppComponent]
