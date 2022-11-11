@@ -17,6 +17,9 @@ import { FormsModule } from '@angular/forms';
 import { MarcacionComponent } from './components/marcacion/marcacion.component';
 
 import { PersonaService } from './services/persona.service';
+import { TipoconfiguracionComponent } from './components/tipoconfiguracion/tipoconfiguracion.component';
+import { TipoconfiguracionmarcacionComponent } from './components/tipoconfiguracionmarcacion/tipoconfiguracionmarcacion.component';
+import { TipoConfiguracionMarcacionService } from './services/tipoconfiguracionmarcacion.service';
 
 
 
@@ -28,6 +31,8 @@ import { PersonaService } from './services/persona.service';
     LoginComponent,
     SetupMarcacionComponent,
     MarcacionComponent,
+    TipoconfiguracionComponent,
+    TipoconfiguracionmarcacionComponent,
   ],
   imports: [
     BrowserModule,
@@ -36,7 +41,7 @@ import { PersonaService } from './services/persona.service';
     HttpClientModule,
     FormsModule
   ],
-  providers: [PersonaService],
+  providers: [PersonaService, TipoConfiguracionMarcacionService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

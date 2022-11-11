@@ -3,6 +3,8 @@ import { RouterModule, Routes } from '@angular/router';
 import { LoginComponent } from './components/login/login.component';
 import { PersonaNaturalFormComponent } from './components/persona-natural-form/persona-natural-form.component';
 import { MarcacionComponent } from './components/marcacion/marcacion.component';
+import { TipoconfiguracionmarcacionComponent } from './components/tipoconfiguracionmarcacion/tipoconfiguracionmarcacion.component';
+
 const routes: Routes = [
   {
     path: '',
@@ -16,6 +18,10 @@ const routes: Routes = [
   {
     path:'Persona',
     component: PersonaNaturalFormComponent
+  },
+  {
+    path:'TipoConfiguracionMarcacion',
+    component: TipoconfiguracionmarcacionComponent
   },
 
 ];
