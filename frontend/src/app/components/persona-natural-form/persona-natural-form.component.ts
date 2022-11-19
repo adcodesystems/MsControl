@@ -13,7 +13,7 @@ export class PersonaNaturalFormComponent implements OnInit {
 
   @HostBinding('class') classes = 'row';
   edit: boolean = false;
-
+  color: string= 'red';
   person: PersonaModel = {
     PERID: 0,
     DOC_PER: '',
@@ -107,6 +107,11 @@ export class PersonaNaturalFormComponent implements OnInit {
         },
         err => console.error(err)
       )
+  }
+  CambiarColor (){
+
+    this.color='green'
+
   }
 
 
