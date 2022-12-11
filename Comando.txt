@@ -2,3 +2,8 @@ git status
 git add .
 git commit -m "Cambio TOTAL"
 git push origin main
+
+
+
+
+git pull
