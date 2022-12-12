@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { PersonaModel } from 'src/app/Models/PersonaModel';
 
 import { PersonaService } from '../../services/persona.service';
