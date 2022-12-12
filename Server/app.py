@@ -1,9 +1,6 @@
 from DataLayer.configMysql import app
-from routes.Producto_Api import *
 from routes.PersonaNatural_Api import *
-# from ApiRest.auth import *
-# from routes.auth import routes_auth
-# from routes.users_github import users_github
+from routes.Usuario_Api import *
 from dotenv import load_dotenv
 
 
