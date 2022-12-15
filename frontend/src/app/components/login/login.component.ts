@@ -23,14 +23,15 @@ export class LoginComponent implements OnInit {
   }
 
   GetAcceso() {
-    this.Usuariosservices.GetAcceso(this.usur.COD,this.usur.PWD).subscribe(
-      res => { this.Usuarios= res; 
+    this.Usuariosservices.GetAcceso(this.usur.COD, this.usur.PWD).subscribe(
+      res => {
+        this.Usuarios = res;
         console.log(res);
-        if(this.Usuarios.length>0)
-        {
-          this.router.navigate(['/Persona']);}
+        if (this.Usuarios.length > 0) {
+          this.router.navigate(['/Persona']);
         }
-        ,
+      }
+      ,
       err => console.error
     );
   }

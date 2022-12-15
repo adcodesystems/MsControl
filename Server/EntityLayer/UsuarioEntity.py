@@ -25,7 +25,7 @@ class UsuarioEntity:
     def CargarAcceso(_DB: any):
         c = UsuarioEntity()
         c.PERID = _DB['PERID']
-        c.FEC_VIG = _DB['FEC_VIG']
+        # c.FEC_VIG = datetime.strptime(_DB['FEC_VIG'], "%Y-%m-%d %H:%M:%S")
         c.USU_REG = _DB['USU_REG']
         c.EST_REG = bool(_DB['EST_REG'])
         return c

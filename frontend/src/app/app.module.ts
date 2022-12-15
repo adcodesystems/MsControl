@@ -20,6 +20,8 @@ import { PersonaService } from './services/persona.service';
 import { TipoconfiguracionComponent } from './components/tipoconfiguracion/tipoconfiguracion.component';
 import { TipoconfiguracionmarcacionComponent } from './components/tipoconfiguracionmarcacion/tipoconfiguracionmarcacion.component';
 import { TipoConfiguracionMarcacionService } from './services/tipoconfiguracionmarcacion.service';
+import { MenuComponent } from './components/menu/menu.component';
+import { PageHomeComponent } from './components/page-home/page-home.component';
 
 
 
@@ -33,6 +35,8 @@ import { TipoConfiguracionMarcacionService } from './services/tipoconfiguracionm
     MarcacionComponent,
     TipoconfiguracionComponent,
     TipoconfiguracionmarcacionComponent,
+    MenuComponent,
+    PageHomeComponent,
   ],
   imports: [
     BrowserModule,

@@ -1,41 +1,47 @@
 
+
+   <app-page-home></app-page-home>
 <div class="container">
-
-  <form action="">
-    <div class="form-row"  >
-      <div class="col-md-3 mb-3">
-        <label for="validationCustom01">Dni</label>
-        <input type="text" class="form-control" [(ngModel)]="person.DOC_PER"  [ngModelOptions]="{standalone: true}">
-
-      </div>
-
-      <div class="col-md-3 mb-3">
-        <label for="validationCustom01">Nombre</label>
-        <input type="text" class="form-control" [(ngModel)]="person.NOM_PER"  [ngModelOptions]="{standalone: true}">
-
-      </div>
-
-      <div class="col-md-3 mb-3">
-        <label for="validationCustom01">Apellido Paterno</label>
-        <input type="text" class="form-control" [(ngModel)]="person.APE_PAT"  [ngModelOptions]="{standalone: true}">
-
-      </div>
-      <div class="col-md-3 mb-3">
-        <label for="validationCustom01">Apellido Materno</label>
-        <input type="text" class="form-control" [(ngModel)]="person.APE_MAT"  [ngModelOptions]="{standalone: true}">
-      </div>
-
-      <div [ngStyle]="{'background-color': color}">Change my color</div>
-      <button  (click)="CambiarColor()">Cambiar color</button>
-
-
+  <div class="row">
+    <div class="col-1">
+   
     </div>
+    <div class="col-10">
 
-    <button class="btn btn-success btn-block" (click)="edit  ? UpdateTotalNewPersona() : SaveNewPersona()">Aceptar</button>
-  </form>
-</div>
+      <form action="">
+        <div class="form-row"  >
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom01">Dni</label>
+            <input type="text" class="form-control" [(ngModel)]="person.DOC_PER"  [ngModelOptions]="{standalone: true}">
+    
+          </div>
+    
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom01">Nombre</label>
+            <input type="text" class="form-control" [(ngModel)]="person.NOM_PER"  [ngModelOptions]="{standalone: true}">
+    
+          </div>
+    
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom01">Apellido Paterno</label>
+            <input type="text" class="form-control" [(ngModel)]="person.APE_PAT"  [ngModelOptions]="{standalone: true}">
+    
+          </div>
+          <div class="col-md-3 mb-3">
+            <label for="validationCustom01">Apellido Materno</label>
+            <input type="text" class="form-control" [(ngModel)]="person.APE_MAT"  [ngModelOptions]="{standalone: true}">
+          </div>
+    
+          <div [ngStyle]="{'background-color': color}">Change my color</div>
+          <button  (click)="CambiarColor()">Cambiar color</button>
+    
+    
+        </div>
+    
+        <button class="btn btn-success btn-block" (click)="edit  ? UpdateTotalNewPersona() : SaveNewPersona()">Aceptar</button>
+      </form>
 
-<br><br>
+      <br><br>
 <div class="container">
  <table class="table table-hover">
     <thead>
@@ -68,3 +74,12 @@
     </tbody>
   </table> 
 </div>
+    </div>
+    <div class="col-1">
+   
+    </div>
+  </div>
+ 
+
+</div>
+

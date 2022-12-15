@@ -56,3 +56,158 @@ header a:hover i{
 .border-shadow{
     box-shadow: 0 0.5rem 1rem rgb(0 0 0 / 15%), inset 0 -1px 0 rgb(0 0 0 / 15%);
 }
+
+ @import "~bootstrap/dist/css/bootstrap.css";
+@import "~bootstrap-icons/font/bootstrap-icons.css";
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu');
+@import url('https://fonts.googleapis.com/css2?family=Lato');
+
+*{
+    margin: 0;
+    top: 0;
+    font-family: 'Ubuntu', sans-serif;
+}
+
+
+header{
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+footer {
+    width: 100%;
+    -webkit-box-sizing:border-box;
+    -moz-box-sizing:border-box;
+    box-sizing:border-box;
+    padding: 20px;
+ 
+}
+
+h1,h2,h3,h4,h5{
+    font-weight: bold;
+}
+
+p{
+    font-family: 'Lato', sans-serif;
+}
+
+li{
+    width: 150px !important;
+    height: 120px !important;
+}
+
+
+i{
+    font-size:3em;
+}
+
+.center-items{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.center-left{
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+
+.center-right{
+    display: flex;
+    justify-content: right;
+    align-items: center;
+}
+
+.bg-color1{
+    background: #F00000;
+}
+
+.bg-color2{
+    background: #ff4848;
+}
+
+.bg-color3{
+    background:#FFFAFA;
+}
+
+.bg-color4{
+    background: #261c15;
+}
+
+.bg-color5{
+    background: #191308;
+}
+
+
+.padding-top-xs{
+    padding-top:20px;
+}
+
+.padding-top-s{
+    padding-top:40px;
+}
+
+.padding-top-m{
+    padding-top:60px;
+}
+
+.padding-top-l{
+    padding-top:80px;
+}
+
+.padding-top-xl{
+    padding-top:100px;
+}
+
+.padding-top-xxl{
+    padding-top:120px;
+}
+
+
+
+.padding-bottom-xs{
+    padding-top:20px;
+}
+
+.padding-bottom-s{
+    padding-top:40px;
+}
+
+.padding-bottom-m{
+    padding-top:60px;
+}
+
+.padding-bottom-l{
+    padding-top:80px;
+}
+
+.padding-bottom-xl{
+    padding-top:100px;
+}
+
+.padding-bottom-xxl{
+    padding-top:120px;
+}
+
+
+
+.space-xs{
+    height: 50px;
+}
+
+.space-s{
+    height: 100px;
+}
+
+.space-m{
+    height: 200px;
+}
+
+.space-l{
+    height: 300px;
+}
+
+.space-xl{
+    height: 400px;
+} 
