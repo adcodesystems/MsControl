@@ -1,4 +1,4 @@
-import { Component, HostBinding, OnInit } from '@angular/core';
+import { Component, OnInit, HostBinding } from '@angular/core';
 import { PersonaModel } from 'src/app/Models/PersonaModel';
 
 import { PersonaService } from '../../services/persona.service';
@@ -15,7 +15,7 @@ export class PersonaNaturalFormComponent implements OnInit {
 
   @HostBinding('class') classes = 'row';
   edit: boolean = false;
-
+  color: string= 'red';
   person: PersonaModel = {
     PERID: 0,
     DOC_PER: '',
@@ -122,6 +122,11 @@ export class PersonaNaturalFormComponent implements OnInit {
         },
         err => console.error(err)
       )
+  }
+  CambiarColor (){
+
+    this.color='green'
+
   }
 
 

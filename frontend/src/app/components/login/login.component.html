@@ -1,64 +1,77 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
-</head>
-<body style="height:100vh">
-    <header>
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <span>-</span>
-                </div>
-                <div class="col-12 text-center">
-                    <h1 class="font-weight-bold">LOGO</h1>
-                </div>
-                <div>&nbsp;</div>
-            </div>
+<div class="container">
+    <!-- <form action="">
+        <div class="form-group">
+            <input type="text" class="form-control" [(ngModel)]="usur.COD"
+                [ngModelOptions]="{standalone: true}" aria-describedby="emailHelp" placeholder="Ingresa tu usuario">
         </div>
-    </header>
 
-    <div class="container">
-        <div class="row center-items">
-            <div class="col-3">
-                <form>
-                    <div class="form-group">
-                        <input type="text" class="form-control" id="User" aria-describedby="emailHelp" placeholder="Ingresa tu usuario">
-                    </div>
-        
-                    <div class="form-group">
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
-                        <small class="form-text text-muted">Distingue mayúsculas y minúsculas.</small>
-                    </div>
-        
-                    <button type="submit" class="btn btn-primary btn-lg btn-block">INICIAR SESIÓN</button>
-                    
-                    <div>
-                        &nbsp;
-                    </div>
-    
-                    <div class="form-group">
-                        <a><u>¿Olvidaste la contraseña?</u></a>
-                    </div>
-                </form>
-            </div>
+        <div class="form-group">
+            <input type="password" class="form-control" [(ngModel)]="usur.PWD" [ngModelOptions]="{standalone: true}"
+            placeholder="Password">
+            <small class="form-text text-muted">Distingue mayúsculas y minúsculas.</small>
         </div>
-        
-    </div>
-    
-    <div class="container-fluid bg-color3" style="height: 60px;">
-        <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
-            <div class="col-sm-6">
-                <p class="text-left text-muted">Ayuda</p>
-            </div>
-            <div class="col-sm-6">
-                <p class="text-right text-muted">v. 1.0.0</p>
-            </div>
-        </footer>
-    </div>
 
-</body>
-</html>
+        <button (click)="GetAcceso()" class="btn btn-primary btn-lg btn-block">INICIAR SESIÓN</button>
+        <div>
+            &nbsp;
+        </div>
+
+        <div class="form-group">
+            <a><u>¿Olvidaste la contraseña?</u></a>
+        </div>
+    </form> -->
+
+<div class="login-wrap">
+	<div class="login-html">
+		<input id="tab-1" type="radio" name="tab" class="sign-in" checked><label for="tab-1" class="tab">Login</label>
+		<input id="tab-2" type="radio" name="tab" class="sign-up"><label for="tab-2" class="tab">Registrate</label>
+		<div class="login-form">
+			<div class="sign-in-htm">
+				<div class="group">
+					<label for="user" class="label">Usuario</label>
+                    <!-- <input type="text" class="form-control" [(ngModel)]="usur.COD"
+                    [ngModelOptions]="{standalone: true}" aria-describedby="emailHelp" placeholder="Ingresa tu usuario"> -->
+					<input id="user" type="text" class="input" [(ngModel)]="usur.COD"
+                    [ngModelOptions]="{standalone: true}" >
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Contraseña</label>
+					<input id="pass" type="password" class="input" [(ngModel)]="usur.PWD" [ngModelOptions]="{standalone: true}" data-type="password">
+				</div>
+			
+				<div class="group">
+					<input type="submit" class="button" (click)="GetAcceso()" value="Entrar">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<a href="#forgot">Olvidades tu contraseña?</a>
+				</div>
+			</div>
+			<div class="sign-up-htm">
+				<div class="group">
+					<label for="user" class="label">Username</label>
+					<input id="user" type="text" class="input">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Password</label>
+					<input id="pass" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Repeat Password</label>
+					<input id="pass" type="password" class="input" data-type="password">
+				</div>
+				<div class="group">
+					<label for="pass" class="label">Email Address</label>
+					<input id="pass" type="text" class="input">
+				</div>
+				<div class="group">
+					<input type="submit" class="button" value="Sign Up">
+				</div>
+				<div class="hr"></div>
+				<div class="foot-lnk">
+					<!-- <label for="tab-1">Already Member?</a> -->
+				</div>
+			</div>
+		</div>
+	</div>
+</div></div>
