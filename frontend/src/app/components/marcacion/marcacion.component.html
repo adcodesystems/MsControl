@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Marcación</title>
 </head>
-<body {ngstyle="background-color:colorbody"}>
+<body [style.background]="colorbody">
     <!-- <div class="container-fluid">
         <header>
             <div class="container">
@@ -281,7 +281,8 @@
                       <p>NO HAS INICIADO TU JORNADA</p>
                   </div>
                   <div class="col-3 center-items padding-top-s hour-text button-marcacion-v1">
-                      <a><span>EMPEZAR</span><i class="bi bi-play-circle"></i></a>
+                      <!-- <a><span>EMPEZAR</span><i class="bi bi-play-circle"></i></a> -->
+                      <button class="button-marcacion-v1" (click)="changecolor()"><span>Cambiar color</span><i class="bi bi-play-circle"></i></button>
                   </div>
                   <div class="col-12 padding-top-xxl center-items">
                       <div class="col-3 center-right">

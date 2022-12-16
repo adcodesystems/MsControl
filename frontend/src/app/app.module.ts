@@ -21,8 +21,8 @@ import { TipoconfiguracionComponent } from './components/tipoconfiguracion/tipoc
 import { TipoconfiguracionmarcacionComponent } from './components/tipoconfiguracionmarcacion/tipoconfiguracionmarcacion.component';
 import { TipoConfiguracionMarcacionService } from './services/tipoconfiguracionmarcacion.service';
 
-
-
+//Carga de scripts para usar en páginas
+import { CargarScriptsService } from './cargarscript/cargar-scripts.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -41,7 +41,11 @@ import { TipoConfiguracionMarcacionService } from './services/tipoconfiguracionm
     HttpClientModule,
     FormsModule
   ],
-  providers: [PersonaService, TipoConfiguracionMarcacionService],
+  providers: [
+    PersonaService, 
+    TipoConfiguracionMarcacionService,
+    CargarScriptsService
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

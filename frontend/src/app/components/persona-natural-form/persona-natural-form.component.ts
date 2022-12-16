@@ -4,6 +4,8 @@ import { PersonaModel } from 'src/app/Models/PersonaModel';
 import { PersonaService } from '../../services/persona.service';
 import { Router } from '@angular/router'
 
+import { CargarScriptsService } from 'src/app/cargarscript/cargar-scripts.service';
+
 @Component({
   selector: 'app-persona-natural-form',
   templateUrl: './persona-natural-form.component.html',
@@ -19,15 +21,27 @@ export class PersonaNaturalFormComponent implements OnInit {
     DOC_PER: '',
     NOM_PER: '',
     APE_PAT: '',
-    APE_MAT: ''
+    APE_MAT: '',
+    DIR:'',
+    DIR_REF:''
   }
   Personas: any = []
 
-  constructor(protected personasservices: PersonaService, private router: Router) { }
+  constructor(protected personasservices: PersonaService, private router: Router, private _CargarScript:CargarScriptsService) 
+  {
+    _CargarScript.CargarScripts(["step"]);
+  }
 
   ngOnInit() {
 
     this.GetPersonas();
+  }
+
+  GetPersonas() {
+    this.personasservices.getPersonas().subscribe(
+      res => { this.Personas = res; },
+      err => console.error
+    );
   }
 
   SaveNewPersona() {
@@ -41,7 +55,9 @@ export class PersonaNaturalFormComponent implements OnInit {
             DOC_PER: '',
             NOM_PER: '',
             APE_PAT: '',
-            APE_MAT: ''
+            APE_MAT: '',
+            DIR: '',
+            DIR_REF: ''
           }
           // this.router.navigate(['/persona']);
         },
@@ -49,14 +65,10 @@ export class PersonaNaturalFormComponent implements OnInit {
       )
   }
 
-  GetPersonas() {
-    this.personasservices.getPersonas().subscribe(
-      res => { this.Personas = res; },
-      err => console.error
-    );
+  SaveNewPersona_Fast(){
+    var mensaje:string = "Hola Mundo";
+    console.log(mensaje);
   }
-
-
 
   DeleteNewPersona(Id: number) {
     this.personasservices.PersonaDelete(Id)
@@ -89,6 +101,7 @@ export class PersonaNaturalFormComponent implements OnInit {
     //     err => console.error(err)
     //   )
   }
+
   UpdateTotalNewPersona() {
     this.personasservices.PersonasUpdate(this.person)
       .subscribe(
@@ -100,7 +113,9 @@ export class PersonaNaturalFormComponent implements OnInit {
             DOC_PER: '',
             NOM_PER: '',
             APE_PAT: '',
-            APE_MAT: ''
+            APE_MAT: '',
+            DIR: '',
+            DIR_REF:''
           }
           this.edit = false
           // this.router.navigate(['/persona']);

@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class MarcacionComponent implements OnInit {
 
-  colorbody:string="red";
+  colorbody="linear-gradient(to bottom right, #ff4848, #F00000)";
 
   constructor() { }
 
@@ -15,7 +15,7 @@ export class MarcacionComponent implements OnInit {
   }
 
   changecolor(){
-    this.colorbody="blue";
+    this.colorbody="linear-gradient(49.52deg, #00AD42 49.61%, #00C957 76.81%)";
   }
 
 

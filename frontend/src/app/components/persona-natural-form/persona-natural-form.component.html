@@ -1,6 +1,5 @@
 
-<div class="container">
-
+<!-- <div class="container">
   <form action="">
     <div class="form-row" >
       <div class="col-md-3 mb-3"  >
@@ -34,10 +33,10 @@
 
     <button class="btn btn-success btn-block"  (click)="edit  ? UpdateTotalNewPersona() : SaveNewPersona()">Aceptar</button>
   </form>
-</div>
+</div> -->
 
-<br><br>
-<div class="container">
+<!-- <br><br> -->
+<!-- <div class="container">
  <table class="table table-hover">
     <thead>
       <tr>
@@ -68,4 +67,206 @@
 
     </tbody>
   </table> 
+</div> -->
+
+<div class="container padding-top-m">
+  <div class="row">
+    <div class="col-md-12">
+      <h2 class="text-center">Registrar Persona</h2>
+      <p class="text-center">Completa los pasos para finalizar el registro. Puedes guardar y completar el registro después.</p>
+      
+        <form class="form center-items" action="">
+            <div class="wrapper-ms">
+                <div class="header-wrapper">
+                    <ul>
+                        <li class="active form_1_progessbar">
+                            <div>
+                                <p>1</p>
+                            </div>
+                        </li>
+                        <li class="form_2_progessbar">
+                            <div>
+                                <p>2</p>
+                            </div>
+                        </li>
+                        <li class="form_3_progessbar">
+                            <div>
+                                <p>3</p>
+                            </div>
+                        </li>
+                        <li class="form_4_progessbar">
+                            <div>
+                                <p>4</p>
+                            </div>
+                        </li>
+                        <li class="form_5_progessbar">
+                            <div>
+                                <p>5</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="form_wrap center-items">
+                    <div class="form_1 data_info">
+                        <form #form="ngForm">
+                            <div class="form_container center-items">
+                                <div class="input_wrap">
+                                    <label for="validationCustom01">Tipo de documento identidad</label>
+                                    <select>
+                                        <option value="" disabled selected>Seleccione</option>
+                                        <option value="1">DNI</option>
+                                        <option value="2">Carnet de extranjería</option>
+                                        <option value="3">Pasaporte</option>
+                                    </select>
+
+                                    <label for="validationCustom01">N° de Documento</label>
+                                    <input type="text" class="form-control" name="doc_per" [(ngModel)]="person.DOC_PER"  [ngModelOptions]="{standalone: true}" aria-describedby="emailHelp" placeholder="N° de documento">
+                            
+                                    <label for="validationCustom01">Nombres</label>
+                                    <input type="text" class="form-control" [(ngModel)]="person.NOM_PER"  [ngModelOptions]="{standalone: true}" placeholder="Nombre completo">
+
+                                    <label for="validationCustom01">Apellido Paterno</label>
+                                    <input type="text" class="form-control" [(ngModel)]="person.APE_PAT"  [ngModelOptions]="{standalone: true}" placeholder="Apellido Paterno">
+
+                                    <label for="validationCustom01">Apellido Materno</label>
+                                    <input type="text" class="form-control" [(ngModel)]="person.APE_MAT"  [ngModelOptions]="{standalone: true}" placeholder="Apellido Materno">
+                                
+                                    </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="form_2 data_info" style="display: none;">
+                        <form>
+                            <div class="form_container">
+                                <div class="input_wrap">
+                                    
+                                        <label for="validationCustom01">Fecha de nacimiento</label>
+                                        <input type="text" class="form-control" [(ngModel)]="person.DOC_PER"  [ngModelOptions]="{standalone: true}" placeholder="Fec. de nacimiento"> 
+                                    
+                                        <label for="validationCustom01">Vencimiento del documento</label>
+                                        <input type="text" class="form-control" [(ngModel)]="person.NOM_PER"  [ngModelOptions]="{standalone: true}" placeholder="Fec. de vencimiento del doc.">
+
+                                        <!-- <label for="validationCustom01">Correo</label>
+                                        <input type="text" class="form-control" [(ngModel)]="person.NOM_PER"  [ngModelOptions]="{standalone: true}"> -->
+                                        <label for="exampleInputEmail1">Email</label>
+                                        <input type="email" class="form-control" id="exampleInputEmail1" [(ngModel)]="person.NOM_PER" aria-describedby="emailHelp" placeholder="Ingresa tu email">
+
+
+                                        <label for="validationCustom01">N° de teléfono</label>
+                                        <input type="text" class="form-control" [(ngModel)]="person.NOM_PER"  [ngModelOptions]="{standalone: true}" placeholder="N° de celular">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="form_3 data_info" style="display: none;">
+                        <form>
+                            <div class="form_container">
+                                <div class="input_wrap">
+                                    <label for="validationCustom01">Género</label>
+                                    <select id="cbo_tipo_sexo" class="form-select">
+                                        <option value="" disabled selected>Seleccione</option>
+                                        <option value="1">Femenino</option>
+                                        <option value="2">Masculino</option>
+                                        <option value="3">No especificado</option>
+                                    </select> 
+
+                                    <label for="validationCustom01">Estado civil</label>
+                                    <select id="cbo_tipo_sexo" class="form-select">
+                                        <option value="" disabled selected>Seleccione</option>
+                                        <option value="1">Soltero</option>
+                                        <option value="2">Casado</option>
+                                        <option value="3">Viudo</option>
+                                    </select> 
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="form_4 data_info" style="display: none;">
+                        <form>
+                            <div class="form_container">
+                                <div class="input_wrap">
+                                    <label for="validationCustom01">Dirección</label>
+                                    <input type="text" class="form-control" [(ngModel)]="person.DIR"  [ngModelOptions]="{standalone: true}" placeholder="Dirección">
+                                
+                                    <label for="validationCustom01">Referencia</label>
+                                    <input type="text" class="form-control" [(ngModel)]="person.DIR_REF"  [ngModelOptions]="{standalone: true}" placeholder="Ref. de dirección">
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="form_5 data_info" style="display: none;">
+                        <form>
+                            <div class="form_container">
+                                <div class="input_wrap">
+                                    <label for="company">Lugar de nacimiento</label>
+                                    <select id="cbo_pais" class="form-select">
+                                        <option value="1" selected>Perú</option>
+                                        <option value="2">Argentina</option>
+                                        <option value="3">Bolivia</option>
+                                        <option value="4">Brasil</option>
+                                        <option value="5">Chile</option>
+                                        <option value="6">Colombia</option>
+                                        <option value="7">Ecuador</option>
+                                        <option value="8">Paraguay</option>
+                                        <option value="9">Uruguay</option>
+                                    </select>
+
+                                    <label for="company">Departamento</label>
+                                    <select id="cbo_departamento" class="form-select">
+                                        <option value="1" selected>Lima</option>
+                                        <option value="2">Abancay</option>
+                                        <option value="3">Apurimac</option>
+                                        <option value="4">Arequipa</option>
+                                        <option value="5">Ayacuho</option>
+                                    </select>
+
+                                    <label for="company">Provincia</label>
+                                    <select id="cbo_lima" class="form-select">
+                                        <option value="1" selected>Lima</option>
+                                        <option value="2">Barranca</option>
+                                        <option value="3">Huacho</option>
+                                        <option value="4">Huaral</option>
+                                    </select>
+
+                                    <label for="company">Distrito</label>
+                                    <select id="cbo_lima" class="form-select">
+                                        <option value="1" selected>Lima</option>
+                                        <option value="2">Callao</option>
+                                        <option value="3">Carabayllo</option>
+                                        <option value="4">Comas</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <div class="btns_wrap">
+                    <div class="common_btns form_1_btns">
+                        <button type="button" class="btn_save"><span class="icon"><i class="bi bi-save" (click)="SaveNewPersona_Fast()"></i></span>Guardar</button>
+                        <button type="button" class="btn_next">Siguiente <span class="icon"><i class="bi bi-arrow-right-short"></i></span></button>
+                    </div>
+                    <div class="common_btns form_2_btns" style="display: none;">
+                        <button type="button" class="btn_back"><span class="icon"><i class="bi bi-arrow-left-short"></i></span>Atrás</button>
+                        <button type="button" class="btn_next">Siguiente <span class="icon"><i class="bi bi-arrow-right-short"></i></span></button>
+                    </div>
+                    <div class="common_btns form_3_btns" style="display: none;">
+                        <button type="button" class="btn_back"><span class="icon"><i class="bi bi-arrow-left-short"></i></span>Atrás</button>
+                        <button type="button" class="btn_next">Siguiente <span class="icon"><i class="bi bi-arrow-right-short"></i></span></button>
+                    </div>
+                    <div class="common_btns form_4_btns" style="display: none;">
+                        <button type="button" class="btn_back"><span class="icon"><i class="bi bi-arrow-left-short"></i></span>Atrás</button>
+                        <button type="button" class="btn_next">Siguiente <span class="icon"><i class="bi bi-arrow-right-short"></i></span></button>
+                    </div>
+                    <div class="common_btns form_5_btns" style="display: none;">
+                        <button type="button" class="btn_back"><span class="icon"><i class="bi bi-arrow-left-short"></i></span>Atrás</button>
+                        <button type="button" class="btn_save"><span class="icon"><i class="bi bi-save" (click)="SaveNewPersona()"></i></span>Guardar</button>
+                    </div>
+                </div>
+            </div>
+            
+        </form>
+        <br>
+        <br>
+    </div>
+  </div>
 </div>
